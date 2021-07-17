@@ -1,0 +1,418 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);   
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+    width: auto;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+
+/* FONTES */
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+
+
+/* ESTILOS */
+
+header{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 25px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: 90%;
+    max-width: 1300px;
+    height: auto;
+    z-index: 1;
+}
+
+.menuLateral{
+    display: none;
+}
+
+.barraSuperior{
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 5%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.background{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+    border-radius: 0 0 50px 0;
+    background: #a041eb;
+}
+
+.barraSuperior a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.barraSuperior h2{
+    color: #ffffff;
+}
+
+.barraSuperior img{
+    margin-right: 15px;
+}
+
+.botoesCliente{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    margin: 15px 0;
+}
+
+.botoesCliente button:nth-of-type(1){
+    background-color: #e1a507;
+}
+
+.botoesCliente button:nth-of-type(2){
+    background-color: #7928b6;
+}
+
+.botoesCliente button:nth-of-type(3){
+    background-image: linear-gradient(to right, #0acdf3 , #10b0d1);
+}
+
+.areaRestrita{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 30%;
+}
+
+.areaRestrita button{
+    border-radius: 0px 0px 20px 20px;
+    background-color: #e1a507;
+}
+
+.banner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url(./header.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner .background{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f1f1f1;
+    box-shadow: 100px 40px 100px 40px #f1f1f1;
+    border-radius: 0 400px 300px 0;
+}
+
+.duvidas{
+    width: 40%;
+    margin: 250px 0 150px;
+}
+
+.duvidas h1{
+    color: #e1a507;
+    margin-bottom: 20px;
+}
+
+.duvidas a{
+    color: blue;
+    text-decoration: underline;
+}
+
+.containerDuvidas{
+    width: 80%;
+    max-width: 1300px;
+    height: auto;
+    margin-top: 60px;
+}
+
+.tituloDuvida{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin: 20px 0;
+}
+
+.tituloDuvida h3{
+    width: fit-content;
+}
+
+.tituloDuvida img{
+    height: fit-content;
+}
+
+#divisoria{
+    width: 100%;
+    height: auto;
+    margin: 0 10px;
+    border: 1px solid #bbbbbb;
+}
+
+.descricaoDuvida{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 40px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.active img{
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+
+.rodape{
+    width: 100%;
+    height: 50px;
+    background-color: #7928b6;
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    h3, h4{
+        font-size: 15px;
+    }
+
+    .barraSuperior{
+        justify-content: flex-end;
+    }
+
+    .background{
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        border-radius: 0;
+        background: #a041eb;
+    }
+
+    .botoesCliente, .areaRestrita{
+        display: none;
+    }
+
+    .menuLateral{
+        height: 100vh;
+        z-index: 2;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #a041eb;
+    }
+
+    .botaoFechar{
+        display: flex;
+        width: 90%;
+        height: auto;
+        justify-content: flex-end;
+    }
+
+    .iconeHamburguer{
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+      
+    .barra1, .barra2, .barra3 {
+        width: 35px;
+        height: 6px;
+        background-color: #e1a507;
+        margin: 6px 0;
+        border-radius: 3px;
+    }
+      
+    .anima .barra1 {
+        transform: rotate(-45deg) translate(-9px, 9px);
+    }
+      
+    .anima .barra2 {opacity: 0;}
+      
+    .anima .barra3 {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .menuLateral button{
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .menuLateral a{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .menuLateral h2{
+        color: #ffffff;
+    }
+
+    .menuLateral img{
+        margin-right: 10px;
+    }
+
+    .botoesMenuLateral{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .botoesMenuLateral button:nth-of-type(1){
+        background-color: #e1a507;
+        margin-top: 20vh;
+    }
+    
+    .botoesMenuLateral button:nth-of-type(2){
+        background-color: #7928b6;
+    }
+    
+    .botoesMenuLateral button:nth-of-type(3){
+        background-image: linear-gradient(to right, #0acdf3 , #10b0d1);
+    }
+
+    .botoesMenuLateral button:nth-of-type(4){
+        background-color: #e1a507;
+        margin-top: 100px;
+    }
+
+    .banner{
+        top: 70px;
+        height: 300px;
+        background-position: 500px;
+    }
+
+    .banner .background{
+        display: none;
+    }
+
+    .duvidas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 220px;
+        margin: 110px 0 50px;
+        background: #f1f1f1b2;
+        box-shadow: 0px 0px 40px 40px #f1f1f1b2;
+        border-radius: 20px;
+    }
+
+    .containerDuvidas{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .tituloDuvida{
+        white-space: normal;
+        margin: 10px 0;
+    }
+
+    .tituloDuvida h3{
+        width: auto;
+    }
+
+    .tituloDuvida img{
+        margin-left: 10px;
+    }
+
+    #divisoria{
+        display: none;
+    }
+}
